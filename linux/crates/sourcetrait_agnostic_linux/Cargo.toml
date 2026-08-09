@@ -1,0 +1,26 @@
+[package]
+name = "sourcetrait_agnostic_linux"
+description = "Linux driver for SourceTrait Agnostic"
+version.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+edition.workspace    = true
+repository.workspace = true
+homepage.workspace   = true
+categories.workspace = true
+keywords.workspace   = true
+
+[dependencies]
+libc.workspace = true
+snafu.workspace = true
+sourcetrait_twostr.workspace = true
+sourcetrait_agnostic_bridge = { workspace = true, optional = true }
+sourcetrait_agnostic_unix.workspace = true
+strum.workspace = true
+
+[dev-dependencies]
+sourcetrait_testing.workspace = true
+
+[features]
+default = ["agnostic"]
+agnostic = ["sourcetrait_agnostic_bridge"]

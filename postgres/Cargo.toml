@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/srcpg",
+]
+
+[workspace.package]
+version = "0.0.0-2"
+edition = "2024"
+authors = ["SourceTrait <development@sourcetrait.com"]
+license = "AGPL-3.0-or-later"
+repository = "https://github.com/sourcetrait/sourcetrait_common_mono"
+homepage = "https://sourcetrait.com"
+categories = []
+keywords = ["sourcetrait", "common"]
+
+[workspace.dependencies]
+pgrx = "=0.16.1"
+pgrx-tests = "=0.16.1"
+serde = { version = "1", features = ["derive"] }
+

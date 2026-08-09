@@ -1,0 +1,39 @@
+[package]
+name = "srcpg"
+description = "Common PostgreSQL extension for Rust"
+version.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+edition.workspace    = true
+repository.workspace = true
+homepage.workspace   = true
+categories.workspace = true
+keywords.workspace   = true
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[[bin]]
+name = "pgrx_embed_srcpg"
+path = "./src/bin/pgrx_embed.rs"
+
+[dependencies]
+pgrx.workspace = true
+serde.workspace = true
+
+[dev-dependencies]
+pgrx-tests.workspace = true
+
+[features]
+default = ["pg18"]
+pg18 = ["pgrx/pg18", "pgrx-tests/pg18" ]
+pg_test = []
+
+[profile.dev]
+panic = "unwind"
+
+[profile.release]
+panic = "unwind"
+opt-level = 3
+lto = "fat"
+codegen-units = 1

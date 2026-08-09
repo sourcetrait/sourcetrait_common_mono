@@ -1,0 +1,32 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/sourcetrait_agnostic_windows",
+]
+
+[workspace.package]
+version = "0.0.0-2"
+edition = "2024"
+authors = ["SourceTrait <development@sourcetrait.com"]
+license = "AGPL-3.0-or-later"
+repository = "https://github.com/sourcetrait/sourcetrait_common_mono"
+homepage = "https://sourcetrait.com"
+categories = []
+keywords = ["sourcetrait", "common"]
+
+[workspace.dependencies]
+snafu = "0.8"
+strum = { version = "0.27", features = ["derive"] }
+widestring = "1"
+windows-sys = { version = ">= 0.59, <=0.61", features = [
+    "Win32_Networking_ActiveDirectory",
+    "Win32_NetworkManagement_NetManagement",
+    "Win32_Security",
+    "Win32_Security_Authorization",
+]}
+
+sourcetrait_stdx = { git = "https://github.com/sourcetrait/sourcetrait_common", branch = "draft/roylaurie" }
+sourcetrait_agnostic_bridge = { git = "https://github.com/sourcetrait/sourcetrait_common", branch = "draft/roylaurie" }
+sourcetrait_testing = { git = "https://github.com/sourcetrait/sourcetrait_common", branch = "draft/roylaurie" }
+sourcetrait_twostr = { git = "https://github.com/sourcetrait/sourcetrait_common", branch = "draft/roylaurie" }
+sourcetrait_agnostic_unix = { git = "https://github.com/sourcetrait/sourcetrait_common_mono", branch = "draft/roylaurie" }
