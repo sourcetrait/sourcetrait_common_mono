@@ -1,5 +1,5 @@
 #[cfg(feature = "agnostic")]
-pub(crate) mod agnostic {
+pub(crate) mod bridged{
     pub(crate) mod component {
         pub(crate) mod net {
             pub(crate) mod net;
@@ -11,7 +11,7 @@ pub(crate) mod agnostic {
 }
 
 pub use crate::{
-    agnostic::{
+    bridged::{
         component::{
             net::{
                 net::*,
@@ -23,7 +23,7 @@ pub use crate::{
 };
 
 pub(crate) use crate::{
-    agnostic::{
+    bridged::{
         consts::*,
     },
 };

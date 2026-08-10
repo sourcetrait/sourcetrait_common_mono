@@ -1,6 +1,6 @@
 [package]
 name = "sourcetrait_agnostic_windows"
-description = "Windows driver for SourceTrait agnostic"
+description = "Windows driver for SourceTrait Agnostic"
 version.workspace    = true
 authors.workspace    = true
 license.workspace    = true

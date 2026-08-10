@@ -1,16 +1,16 @@
 use crate::*;
 
 pub struct MacOsUiComponentLookup;
-impl cross::UiComponentLookup for MacOsUiComponentLookup {
-    fn lookup_has_command_line(&self) -> cross::BridgeResult<bool> {
+impl agnostic::UiComponentLookup for MacOsUiComponentLookup {
+    fn lookup_has_command_line(&self) -> agnostic::BridgeResult<bool> {
         match env::var(unix::ENV_TERM) {
             Ok(_) => Ok(true),
             Err(env::VarError::NotPresent) => Ok(false),
-            Err(source) => cross::BridgeError::err_env_var(unix::ENV_VAR_TERM, source),
+            Err(source) => agnostic::BridgeError::err_env_var(unix::ENV_VAR_TERM, source),
         }
     }
 
-    fn lookup_has_graphical(&self) -> cross::BridgeResult<bool> {
+    fn lookup_has_graphical(&self) -> agnostic::BridgeResult<bool> {
         const CMD_LAUNCHCTL: &'static str = "launchctl";
         const ARG_MANAGERNAME: &'static str = "managername";
         const AQUA: &'static str = "Aqua";
