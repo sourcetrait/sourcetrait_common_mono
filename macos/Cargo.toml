@@ -16,11 +16,10 @@ keywords = ["sourcetrait", "common"]
 
 [workspace.dependencies]
 snafu = "0.8"
-#sourcetrait_stdx = "1"
 strum = { version = "0.27", features = ["derive"] }
 
-sourcetrait_stdx = { git = "https://github.com/sourcetrait/sourcetrait_common", branch = "draft/roylaurie" }
-sourcetrait_agnostic_bridge = { git = "https://github.com/sourcetrait/sourcetrait_common", branch = "draft/roylaurie" }
-sourcetrait_testing = { git = "https://github.com/sourcetrait/sourcetrait_common", branch = "draft/roylaurie" }
-sourcetrait_twostr = { git = "https://github.com/sourcetrait/sourcetrait_common", branch = "draft/roylaurie" }
-sourcetrait_agnostic_unix = { git = "https://github.com/sourcetrait/sourcetrait_common_mono", branch = "draft/roylaurie" }
+sourcetrait_agnostic_bridge = { path = "../../sourcetrait_common/crates/sourcetrait_agnostic_bridge" }
+sourcetrait_agnostic_unix = { path = "../../sourcetrait_common_mono/unix/crates/sourcetrait_agnostic_unix" }
+sourcetrait_stdx = { path = "../../sourcetrait_common/crates/sourcetrait_stdx"  }
+sourcetrait_testing = { path = "../../sourcetrait_common/crates/sourcetrait_testing" }
+sourcetrait_twostr = { path = "../../sourcetrait_common/crates/sourcetrait_twostr" }
