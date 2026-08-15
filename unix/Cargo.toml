@@ -20,7 +20,7 @@ libc = "0.2"
 snafu = "0.8"
 strum = { version = "0.27", features = ["derive"] }
 
-sourcetrait_stdx = { path = "../../sourcetrait_common/crates/sourcetrait_stdx"  }
-sourcetrait_agnostic_bridge = { path = "../../sourcetrait_common/crates/sourcetrait_agnostic_bridge" }
-sourcetrait_testing = { path = "../../sourcetrait_common/crates/sourcetrait_testing" }
-sourcetrait_twostr = { path = "../../sourcetrait_common/crates/sourcetrait_twostr" }
+sourcetrait_stdx              = { path = "../../sourcetrait_common/crates/sourcetrait_stdx",            version = "0.0.0-2" }
+sourcetrait_agnostic_bridge   = { path = "../../sourcetrait_common/crates/sourcetrait_agnostic_bridge", version = "0.0.0-2" }
+sourcetrait_testing           = { path = "../../sourcetrait_common/crates/sourcetrait_testing",         version = "0.0.0-2" }
+sourcetrait_twostr            = { path = "../../sourcetrait_common/crates/sourcetrait_twostr",          version = "0.0.0-2" }
